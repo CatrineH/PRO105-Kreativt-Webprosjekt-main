@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles/guess_who_game.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/index.css"  />
+    <link rel="icon"  href="/assets/images/lego_logo.png" />
+    
+    <title>Guess Who Game</title>
+  </head>
+  <body>
+    <!-- BACKGROUND IMAGE-->
+<div class="background_image">
+      <!--NAVIGATION-->
+    
+       <!-- Navigasjonsbaren med logo som viser tilbake til hovedsiden, og de tre spillene -->
+       <header> 
+        <ul class="nav_list">
+          <li class="nav_item" id="lego_logo"><a href="index.html">
+            <img src="../assets/images/lego_logo.png"
+            alt="Instagram icon"
+            width="80"
+            height="80"></a></li>
+          <li class="nav_item"><a href="guess_who_game.html">GUESS WHO GAME</a></li>
+          <li class="nav_item"><a href="funfacts.html"> LEGO FUNFACTS</a></li>
+          <li class="nav_item"><a href="puzzle_art_game.html">PUZZLE GAME</a></li>
+        </ul>
+      </header>
+
+    <div id="container">
+        <img id="question_mark" src="../assets/images/question_mark.png" alt="Question Mark Animation">
+        <p id="welcome_text">HINT!<br> THESE CARTOONS ARE FROM FRANCE!<br><br>GOOD LUCK!</p>
+    </div>
+
+ <!-- GUESS WHO GAME -->
+<div class="slide-container">
+      <div id="game1">
+        <img
+          class="asterix"
+          src="../assets/guess_who/asterix_obelix/svg/asterix.svg"
+          alt="asterix" height="200"
+          width="200"/>
+        <img
+          class="idefix"
+          src="../assets/guess_who/asterix_obelix/svg/idefix.svg"
+          alt="idefix" height="200"
+          width="200"
+        />
+        <img
+          class="obelix"
+          src="../assets/guess_who/asterix_obelix/svg/obelix.svg"
+          alt="obelix" height="200"
+          width="200"
+        />
+    </div>
+
+<!-- ANSWER BUTTONS WITH ALERT -->
+    <div class="text">
+        <h1>GUESS WHO..?</h1>
+    </div>
+
+    <div class="answer-container">
+        <button
+          type="submit"
+          class="false"
+          onclick="alert('Oh no!!! You guessed wrong!')">
+          ANIMANIACS
+        </button>
+
+        <button
+          type="submit"
+          class="true"
+          onclick="alert('Jubalong yes!!! You guessed right')">
+          ASTERIX AND OBELIX
+        </button>
+
+        <button
+          type="submit"
+          class="false"
+          onclick="alert('Oh no!!! You guessed wrong!')">
+          POWERPUFF GIRLS
+        </button>
+    </div>
+
+<!-- ANSWER BUTTONS WITH ALERT -->
+
+<!-- GAME SLIDE BUTTONS WORK BY CATRINE -->
+  <div class="arrows">
+
+    <div class="arrow prev">
+        <a class="slide" href="the_simpsons.html">GAME 4</a>
+    </div>
+      <div class="arrow next">
+        <a class="slide" href="donald_duck.html">GAME 2</a>
+      </div>
+
+</div>
+
+
+    <!-- FOOTER -->
+    <!--Footer med sosiale medie ikoner som er lenket (får opp ny tab)-->
+    <footer>
+      <div class="footer">
+
+        <a href="https://www.facebook.com/LEGO/" target="_blank">
+        <img src="../assets/images/Social_media_icon_facebook.png"
+        alt="Facebookicon"
+        width="50"
+        height="50"></a>
+        
+
+        <a href="https://www.instagram.com/lego/" target="_blank">
+        <img src="../assets/images/Social_media_icon_insta.png"
+        alt="Instagramicon"
+        width="50"
+        height="50"></a>
+        
+
+        <a href="https://www.youtube.com/user/LEGO" target="_blank">
+        <img src="../assets/images/Social_media_icon_youtube.png" 
+        alt="Youtubeicon"
+        width="60"
+        height="60" id="youtube"></a>
+      </div>
+    </footer>
+</div>
+</div>
+</body>
+</html>

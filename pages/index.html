@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles/index.css"/>
+    <!-- Får å få Lego-logoen som favicon -->
+    <link rel="icon"  href="../assets/images/lego_logo.png" />
+    <title>Lego Playground</title>
+  </head>
+  <body>
+    
+    <!-- BACKGROUND IMAGE-->
+    <div class="background_image">
+      <!--NAVIGATION-->
+    
+       <!-- Navigasjonsbaren med logo som viser tilbake til hovedsiden, og de tre spillene -->
+       <header> 
+        <ul class="nav_list">
+          <li class="nav_item" id="lego_logo"><a href="index.html">
+            <img src="../assets/images/lego_logo.png"
+            alt="Instagram icon"
+            width="80"
+            height="80"></a></li>
+          <li class="nav_item"><a href="guess_who_game.html">GUESS WHO GAME</a></li>
+          <li class="nav_item"><a href="funfacts.html"> LEGO FUNFACTS</a></li>
+          <li class="nav_item"><a href="puzzle_art_game.html">PUZZLE GAME</a></li>
+        </ul>
+      </header>
+
+    <!-- Seksjonen med den roterende legoklossen -->
+
+    <section> 
+      <img
+      class="lego_brick"
+      src="../assets/images/brick.png"
+      alt="Lego Brick Rotating"/>
+      <!-- Container med question mark animasjonen med hover som viser tekst -->
+      <div id="container">
+        <img id="question_mark" src="../assets/images/question_mark.png" alt="Question Mark Animation">
+        <p id="welcome_text">WELCOME TO LEGO PLAYGROUND!<br><br>HERE YOU CAN PLAY TWO FUN GAMES<br><br> AND READ SOME FUNFACTS ABOUT LEGO <br><br> ENJOY!</p>
+      </div>
+
+      <!-- Egen div med tekst som vises på side -->
+      <div class="main_text">
+      LEGO PLAYGROUND
+      </div>
+    </section>
+    
+    <!--Footer med sosiale medie ikoner som er lenket (får opp ny tab)-->
+    <footer>
+      <div class="footer">
+
+        <a href="https://www.facebook.com/LEGO/" target="_blank">
+        <img src="../assets/images/Social_media_icon_facebook.png"
+        alt="Facebook icon"
+        width="50"
+        height="50"></a>
+        
+
+        <a href="https://www.instagram.com/lego/" target="_blank">
+        <img src="../assets/images/Social_media_icon_insta.png"
+        alt="Instagram icon"
+        width="50"
+        height="50"></a>
+        
+
+        <a href="https://www.youtube.com/user/LEGO" target="_blank">
+        <img src="../assets/images/Social_media_icon_youtube.png" 
+        alt="Youtube icon"
+        width="60"
+        height="60" id="youtube"></a>
+      </div>
+    </footer>
+
+    </div>
+  </body>
+</html>

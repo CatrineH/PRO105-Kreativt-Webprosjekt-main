@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../styles/puzzle_art_game.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/index.css"/>
+  <title>puzzle_art_game</title>
+ 
+</head>
+
+<body>
+ 
+   <!--BACKGROUND IMAGE-->
+    <div class="background_image">
+      
+      <!--NAVIGATION-->
+    
+       <!-- Navigasjonsbaren med logo som viser tilbake til hovedsiden, og de tre spillene -->
+       <header> 
+        <ul class="nav_list">
+          <li class="nav_item" id="lego_logo"><a href="index.html">
+            <img src="../assets/images/lego_logo.png"
+            alt="Instagram icon"
+            width="80"
+            height="80"></a></li>
+          <li class="nav_item"><a href="guess_who_game.html">GUESS WHO GAME</a></li>
+          <li class="nav_item"><a href="funfacts.html"> LEGO FUNFACTS</a></li>
+          <li class="nav_item"><a href="puzzle_art_game.html">PUZZLE GAME</a></li>
+        </ul>
+      </header>
+  
+        <div id="container">
+          <img id="question_mark" src="../assets/images/question_mark.png" alt="Question Mark Animation">
+          <p id="welcome_text">USE THE ARROWS IN THE PUZZLE TO MOVE THE BRICKS. <br><br>ENJOY YOUR PUZZLE!<br></p>
+        </div>
+
+<!-- PUZZEL GAME-->
+
+<!-- deler av koden er hentet fra https://codepen.io/M_J_Robbins/pen/VeNWQQ og endret etter behov.!-->
+
+<!-- Checkbox og radio som gjør det mulig å bytte blandt de
+  tre lego-maleriene!-->
+<input type="checkbox" id="checkbox">
+<input type="radio" id="monalisa" name="image" checked>
+<input type="radio" id="vanGogh" name="image">
+<input type="radio" id="grantWood" name="image">
+
+
+<!-- Denne kompliserte koden gjør det mulig å dele opp spillebretter i 8 deler og sier noe om bevegelsen som seinere blir kodet i css. Koden er basert på radio, slik at når en radio er "checked" så bytter delene i bildet plass, enten vertikalt eller hotizontalt. -->
+<input type="radio" id="a-up" name="a-vertical">
+<input type="radio" id="a-middle" name="a-vertical" checked>
+<input type="radio" id="a-down" name="a-vertical">
+<input type="radio" id="a-left" name="a-horizontal" checked>
+<input type="radio" id="a-center" name="a-horizontal">
+<input type="radio" id="a-right" name="a-horizontal">
+<input type="radio" id="b-up" name="b-vertical" checked>
+<input type="radio" id="b-middle" name="b-vertical">
+<input type="radio" id="b-down" name="b-vertical">
+<input type="radio" id="b-left" name="b-horizontal" checked>
+<input type="radio" id="b-center" name="b-horizontal">
+<input type="radio" id="b-right" name="b-horizontal">
+<input type="radio" id="c-up" name="c-vertical">
+<input type="radio" id="c-middle" name="c-vertical" checked>
+<input type="radio" id="c-down" name="c-vertical">
+<input type="radio" id="c-left" name="c-horizontal">
+<input type="radio" id="c-center" name="c-horizontal">
+<input type="radio" id="c-right" name="c-horizontal" checked>
+<input type="radio" id="d-up" name="d-vertical" checked>
+<input type="radio" id="d-middle" name="d-vertical">
+<input type="radio" id="d-down" name="d-vertical">
+<input type="radio" id="d-left" name="d-horizontal">
+<input type="radio" id="d-center" name="d-horizontal" checked>
+<input type="radio" id="d-right" name="d-horizontal">
+<input type="radio" id="e-up" name="e-vertical">
+<input type="radio" id="e-middle" name="e-vertical">
+<input type="radio" id="e-down" name="e-vertical" checked>
+<input type="radio" id="e-left" name="e-horizontal">
+<input type="radio" id="e-center" name="e-horizontal" checked>
+<input type="radio" id="e-right" name="e-horizontal">
+<input type="radio" id="f-up" name="f-vertical">
+<input type="radio" id="f-middle" name="f-vertical" checked>
+<input type="radio" id="f-down" name="f-vertical">
+<input type="radio" id="f-left" name="f-horizontal">
+<input type="radio" id="f-center" name="f-horizontal" checked>
+<input type="radio" id="f-right" name="f-horizontal">
+<input type="radio" id="g-up" name="g-vertical" checked>
+<input type="radio" id="g-middle" name="g-vertical">
+<input type="radio" id="g-down" name="g-vertical">
+<input type="radio" id="g-left" name="g-horizontal">
+<input type="radio" id="g-center" name="g-horizontal">
+<input type="radio" id="g-right" name="g-horizontal" checked>
+<input type="radio" id="h-up" name="h-vertical">
+<input type="radio" id="h-middle" name="h-vertical">
+<input type="radio" id="h-down" name="h-vertical" checked>
+<input type="radio" id="h-left" name="h-horizontal" checked>
+<input type="radio" id="h-center" name="h-horizontal">
+<input type="radio" id="h-right" name="h-horizontal">
+
+<!-- Deler spillebrettet opp i 8 biter (en rute er tom) og forteller noe om hvor hver del skal plasseres når en bestemt "radio" er checked (plasseringen blir seinere kodet i css)-->
+<div class="board">
+  <div class="peice-a">
+    <label for="a-up"></label>
+    <label for="a-middle"></label>
+    <label for="a-down"></label>
+    <label for="a-left"></label>
+    <label for="a-center"></label>
+    <label for="a-right"></label>
+  </div>
+  
+  <div class="peice-b">
+    <label for="b-up"></label>
+    <label for="b-middle"></label>
+    <label for="b-down"></label>
+    <label for="b-left"></label>
+    <label for="b-center"></label>
+    <label for="b-right"></label>
+  </div>
+
+  <div class="peice-c">
+    <label for="c-up"></label>
+    <label for="c-middle"></label>
+    <label for="c-down"></label>
+    <label for="c-left"></label>
+    <label for="c-center"></label>
+    <label for="c-right"></label>
+  </div>
+
+  <div class="peice-d">
+    <label for="d-up"></label>
+    <label for="d-middle"></label>
+    <label for="d-down"></label>
+    <label for="d-left"></label>
+    <label for="d-center"></label>
+    <label for="d-right"></label>
+  </div>
+
+  <div class="peice-e">
+    <label for="e-up"></label>
+    <label for="e-middle"></label>
+    <label for="e-down"></label>
+    <label for="e-left"></label>
+    <label for="e-center"></label>
+    <label for="e-right"></label>
+  </div>
+
+  <div class="peice-f">
+    <label for="f-up"></label>
+    <label for="f-middle"></label>
+    <label for="f-down"></label>
+    <label for="f-left"></label>
+    <label for="f-center"></label>
+    <label for="f-right"></label>
+  </div>
+
+  <div class="peice-g">
+    <label for="g-up"></label>
+    <label for="g-middle"></label>
+    <label for="g-down"></label>
+    <label for="g-left"></label>
+    <label for="g-center"></label>
+    <label for="g-right"></label>
+  </div>
+
+  <div class="peice-h">
+    <label for="h-up"></label>
+    <label for="h-middle"></label>
+    <label for="h-down"></label>
+    <label for="h-left"></label>
+    <label for="h-center"></label>
+    <label for="h-right"></label>
+  </div>
+
+  <!-- Bildet skal være i 8 deler (en tom rute) og hver del får en bokstav, dette ble også brukt i koden for å kunne gi hver brikke muligheter til å lyttes-->
+  <div class="peice-a img"> </div>
+  <div class="peice-b img"></div>
+  <div class="peice-c img"></div>
+  <div class="peice-d img"></div>
+  <div class="peice-e img"></div>
+  <div class="peice-f img"></div>
+  <div class="peice-g img"></div>
+  <div class="peice-h img"></div>
+</div>
+<!--tekst tilknyttet radio-koden. Vi fjerner checkboxene og radio seinere i css slik at kun teksten vises. Tekten funker da som en radio-->
+<div id="choice">
+  <label class="select" for="monalisa">MONALISA</label>
+  <label class="select" for="vanGogh">VAN GOGH</label>
+  <label class="select" for="grantWood">GRANT WOOD</label>
+  </div>
+
+  <!--Teksten "winner" skal dukke opp når man klarer å matche alle brikkene, dette blir kodet i css-->
+  <div class="winner">WINNER!</div>
+
+<!--FOOTER-->
+ <!--Footer med sosiale medie ikoner som er lenket (får opp ny tab)-->
+ <footer>
+  <div class="footer">
+
+    <a href="https://www.facebook.com/LEGO/" target="_blank">
+    <img src="../assets/images/Social_media_icon_facebook.png"
+    alt="Facebookicon"
+    width="50"
+    height="50"></a>
+    
+
+    <a href="https://www.instagram.com/lego/" target="_blank">
+    <img src="../assets/images/Social_media_icon_insta.png"
+    alt="Instagramicon"
+    width="50"
+    height="50"></a>
+    
+
+    <a href="https://www.youtube.com/user/LEGO" target="_blank">
+    <img src="../assets/images/Social_media_icon_youtube.png" 
+    alt="Youtubeicon"
+    width="60"
+    height="60" id="youtube"></a>
+  </div>
+</footer>
+</div>
+</body>
+</html>

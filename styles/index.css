@@ -1,0 +1,205 @@
+/*
+COLORS
+RED #d01012
+WHITE #ffffff
+YELLOW #fecf30
+BLACK #000000;
+*/
+
+
+@font-face {
+  font-family: "legothick";
+  src: url("../font/lego/Legothick.ttf") format("truetype");
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Bakgrunnsbilde så den dekker hele siden */
+.background_image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+}
+
+/* For å få en opacity effekt */
+.background_image::after {
+  content: "";
+  background-image: url(../assets/images/background.png);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#lego_logo{
+  cursor: pointer;
+  
+}
+/* Navigasjonsbaren */
+.nav_list {
+  display: flex;
+  flex: 0 100px;
+  font-family: legothick;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  font-size: 3vh;
+  list-style: none;
+}
+
+/* Elementene i nav baren */
+.nav_item {
+  margin-top: 7.5vh;
+  margin-right: 28vh;
+  background-color: rgba(209, 7, 10, 255);
+  border-radius: 1.5vh;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  height: fit-content;
+
+  white-space: nowrap;
+  
+}
+
+/*For å fjerne linken og få teksten hvit */
+.nav_item a,
+li {
+  text-decoration: none;
+  color: white;
+}
+
+/* For å flytte lego logoen helt til venstre på siden */
+.nav_item:first-child {
+  background-color: initial;
+  margin-top: 4vh;
+  margin-left: 3vh;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: black;
+}
+
+/* Egenskaper til lego klossen */
+.lego_brick {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55vh;
+  height: 60vh;
+  animation: legobrick 2.5s ease-in-out infinite;
+}
+
+/*Effekt som gjør at hover får en effekt */
+@keyframes legobrick {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* container til question mark */
+#container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70vh;
+  left: 150vh;
+  height: 3vh;
+  width: 3vh;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* id til question mark */
+#question_mark {
+  width: 20vh;
+  opacity: 1;
+  z-index: -2;
+  animation: jump 1s linear infinite alternate;
+}
+
+/* animasjonen som gjør at question mark hopper opp og ned */
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* teksten som vises når man hover over question mark */
+#welcome_text {
+  position: fixed;
+  visibility: hidden;
+  font-family: "legothick";
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  font-size: 4vh;
+  text-align: center;
+  background-color: rgba(209, 7, 10, 255);
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 5px;
+  margin-top: -65vh;
+  margin-left: -10vh;
+  margin-right: 3vh;
+}
+
+#container:hover #welcome_text {
+  visibility: visible;
+}
+
+/* hovedteksten under legoklossen */
+.main_text {
+  display: block;
+  text-align: center;
+  font-family: "legothick";
+  font-size: 13vh;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+/* justering av footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: auto;
+  background-color: initial;
+  text-align: center;
+}
+
+#youtube {
+  margin-left: 5px;
+  margin-bottom: -5px;
+}
+
+
+

@@ -1,0 +1,276 @@
+/*
+COLORS
+RED #d01012
+WHITE #ffffff
+YELLOW #fecf30
+BLACK #000000;
+*/
+
+@font-face {
+  font-family: "legothick";
+  src: url("../font/lego/Legothick.ttf") format("truetype");
+}
+
+body {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: black;
+}
+
+/* Container 1 med spørsmål boks for informasjon */
+
+.container_1 {
+  position: fixed;
+  font-family: legothick;
+  letter-spacing: 1px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  background-color: rgba(209, 7, 10, 255);
+  border-radius: 10px;
+  padding: 10px 10px;
+  top: 35%;
+  left: 35%;
+  right: 35%;
+  z-index: 2;
+  visibility: hidden;
+}
+
+/* Bruker muspekeren på boksen for å se informasjon */
+
+#container_question_mark_1:hover .container_1 {
+  visibility: visible;
+}
+
+#container_question_mark_1 {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  margin-top: 50px;
+  margin-left: 390px;
+  z-index: 2;
+}
+
+#question_mark_1 {
+  width: 350px;
+  z-index: -2;
+  animation: jump1 1s linear infinite alternate;
+}
+
+/* Ulike koder for å holde animasjonen i gang */
+
+@keyframes jump1 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Container 2 med spørsmål boks for informasjon */
+
+.container_2 {
+  position: fixed;
+  font-family: legothick;
+  letter-spacing: 1px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  background-color: rgba(209, 7, 10, 255);
+  border-radius: 10px;
+  padding: 10px 10px;
+  top: 35%;
+  right: 35%;
+  left: 35%;
+  z-index: 2;
+  visibility: hidden;
+}
+
+/* Bruker muspekeren på boksen for å se informasjon */
+
+#container_question_mark_2:hover .container_2 {
+  visibility: visible;
+}
+
+#container_question_mark_2 {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  margin-top: 250px;
+  margin-left: 1080px;
+  z-index: 2;
+}
+
+#question_mark_2 {
+  width: 350px;
+  z-index: -2;
+  animation: jump2 1s linear infinite alternate;
+}
+
+/* Ulike koder for å holde animasjonen i gang */
+
+@keyframes jump2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Container 3 med spørsmål boks for informasjon */
+
+.container_3 {
+  position: fixed;
+  font-family: legothick;
+  letter-spacing: 1px;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  background-color: rgba(209, 7, 10, 255);
+  border-radius: 10px;
+  padding: 10px 10px;
+  top: 35%;
+  left: 35%;
+  right: 35%;
+  z-index: 2;
+  visibility: hidden;
+}
+
+/* Bruker muspekeren på boksen for å se informasjon */
+
+#container_question_mark_3:hover .container_3 {
+  visibility: visible;
+}
+
+
+#container_question_mark_3 {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  margin-top: 250px;
+  margin-left: 190px;
+}
+
+#question_mark_3 {
+  width: 350px;
+  z-index: -2;
+  animation: jump3 1s linear infinite alternate;
+}
+
+ /* Ulike koder for å holde animasjonen i gang */
+
+@keyframes jump3 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Container 4 med spørsmål boks for informasjon */
+
+.container_4 {
+  position: fixed;
+  font-family: legothick;
+  letter-spacing: 1px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  background-color: rgba(209, 7, 10, 255);
+  border-radius: 10px;
+  padding: 10px 10px;
+  top: 35%;
+  left: 35%;
+  right: 35%;
+  z-index: 2;
+  visibility: hidden;
+}
+
+#container_question_mark_4:hover .container_4 {
+  visibility: visible;
+}
+
+/* Bruker muspekeren på boksen for å se informasjon */
+
+#container_question_mark_4 {
+
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 50px;
+  width: 100px;
+  margin-left: 900px;
+}
+
+#question_mark_4 {
+  width: 350px;
+  z-index: -2;
+  animation: jump4 1s linear infinite alternate;
+}
+
+/* Ulike koder for å holde animasjonen i gang */
+
+@keyframes jump4 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Lego figur av Supermann som flyr */
+
+#superman {
+  position: fixed;
+  align-items: center;
+  top: 35%;
+  left: 40%;
+  opacity: 10;
+  z-index: 1;
+  animation: superman_flying 4s linear infinite alternate;
+}
+
+/* Ulike koder for å holde animasjonen i gang */
+
+@keyframes superman_flying {
+  0% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
